@@ -13,7 +13,7 @@ export const routes: Routes = [
   { path: 'error', component: UncaughtErrorComponent },
   { path: 'my-tasks', component: MyTasksComponent, data: { text: 'My Tasks' } },
   { path: 'dashboards', component: DashboardsComponent, data: { text: 'Dashboards' } },
-  { path: 'dashboard-viewer', component: DashboardViewerComponent, data: { text: 'DashboardViewer' } },
+  { path: 'dashboard-viewer/:id', component: DashboardViewerComponent, data: { text: 'DashboardViewer' } },
   { path: '**', component: PageNotFoundComponent } // must always be last
 ];
 

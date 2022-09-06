@@ -44,7 +44,7 @@
     </h5>
   </div>
   <div class="column-layout group_3">
-    <igx-card *ngFor="let item of revealDashboardsListDashboards" routerLink="/dashboard-viewer" class="card">
+    <igx-card *ngFor="let item of revealDashboardsListDashboards" routerLink="/dashboard-viewer/{{ item.Title }}" class="card">
       <igx-card-header>
         <div igxCardThumbnail>
           <igx-avatar [src]="item.AddedByImageUrl" [roundShape]="true"></igx-avatar>
@@ -56,7 +56,7 @@
           {{ item.DateAdded }}
         </h5>
       </igx-card-header>
-      <igx-card-media height="400px">
+      <igx-card-media height="400px"> 
         <img [src]="item.ThumbnailURL" class="image" />
       </igx-card-media>
       <igx-card-actions [reverse]="true" class="actions-content">
