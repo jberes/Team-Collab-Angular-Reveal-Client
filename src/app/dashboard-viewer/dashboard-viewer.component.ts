@@ -28,7 +28,7 @@ ngAfterViewInit(): void {
   //  $.ig.RevealSdkSettings.theme = theme;
 
     $.ig.RevealSdkSettings.setBaseUrl('https://samples.revealbi.io/upmedia-backend/reveal-api/');
-   $.ig.RevealSdkSettings.enableNewCharts='true'
+    $.ig.RevealSdkSettings.enableNewCharts='true';
     $.ig.RevealSdkSettings.ensureFontsLoadedAsync().then(() => {
         $.ig.RVDashboard.loadDashboard(id, (dashboard: any) => {
         this.revealView = new $.ig.RevealView(this.el.nativeElement);
@@ -68,7 +68,6 @@ ngAfterViewInit(): void {
         // this.revealView.singleVisualizationMode = false;
         // this.revealView.startInEditMode = false;
         // this.revealView.startWithNewVisualization = false;
-
 
         this.revealView.dashboard = dashboard;
     });
