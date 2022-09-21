@@ -22,10 +22,12 @@ ngAfterViewInit(): void {
     console.log(id);
     
 
-  //  var theme = new $.ig.MountainDarkTheme();
-  //  theme.visualizationBackgroundColor = '#212121';
-  //  theme.dashboardBackgroundColor = '#424242';
-  //  $.ig.RevealSdkSettings.theme = theme;
+    //var theme = new $.ig.MountainDarkTheme();
+    //theme.visualizationBackgroundColor = '#212121';
+    //theme.dashboardBackgroundColor = '#424242';
+    //$.ig.RevealSdkSettings.theme = theme;
+
+ // $.ig.RevealSdkSettings.overrideLocale(RevealApi.SupportedLocales.Ko);
 
     $.ig.RevealSdkSettings.setBaseUrl('https://samples.revealbi.io/upmedia-backend/reveal-api/');
     $.ig.RevealSdkSettings.enableNewCharts='true';
