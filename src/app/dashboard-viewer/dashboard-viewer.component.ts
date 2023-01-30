@@ -22,14 +22,18 @@ ngAfterViewInit(): void {
     console.log(id);
     
 
-    //var theme = new $.ig.MountainDarkTheme();
-    //theme.visualizationBackgroundColor = '#212121';
-    //theme.dashboardBackgroundColor = '#424242';
-    //$.ig.RevealSdkSettings.theme = theme;
+    var theme = new $.ig.MountainDarkTheme();
+    theme.visualizationBackgroundColor = '#212121';
+    theme.dashboardBackgroundColor = '#424242';
+    theme.useRoundedCorners = false;
+    theme.chartColors = ['#72B24D', '#9362A3', '#F06583', '#FCB13F', '#407DB7' ]; 
+
+    $.ig.RevealSdkSettings.theme = theme;
 
  // $.ig.RevealSdkSettings.overrideLocale(RevealApi.SupportedLocales.Ko);
 
-    $.ig.RevealSdkSettings.setBaseUrl('https://samples.revealbi.io/upmedia-backend/reveal-api/');
+    //$.ig.RevealSdkSettings.setBaseUrl('https://samples.revealbi.io/upmedia-backend/reveal-api/');
+    $.ig.RevealSdkSettings.setBaseUrl('https://localhost:7299/'); 
     $.ig.RevealSdkSettings.enableNewCharts='true';
     $.ig.RevealSdkSettings.ensureFontsLoadedAsync().then(() => {
         $.ig.RVDashboard.loadDashboard(id, (dashboard: any) => {
