@@ -10,7 +10,7 @@
   flex-direction: column;
 }
 .left_nav {
-  background-color: hsla(var(--igx-surface-500));
+  background-color: hsla(var(--ig-surface-500));
   justify-content: flex-start;
   align-items: stretch;
   align-content: flex-start;
@@ -52,7 +52,7 @@
   flex-shrink: 0;
 }
 .content_section {
-  background-color: hsla(var(--igx-grays-100));
+  background-color: hsla(var(--ig-gray-100));
   justify-content: flex-start;
   align-items: stretch;
   align-content: flex-start;
@@ -121,13 +121,13 @@
   font-size: 24px;
   width: 24px;
   height: 24px;
-  color: hsla(var(--igx-grays-700));
+  color: hsla(var(--ig-gray-700));
 }
 .icon_1 {
   font-size: 24px;
   width: 24px;
   height: 24px;
-  color: hsla(var(--igx-grays-500));
+  color: hsla(var(--ig-gray-500));
 }
 .h5 {
   color: #D4D5D9;
@@ -177,20 +177,20 @@
   min-width: min-content;
 }
 .button {
-  color: hsla(var(--igx-secondary-500));
+  color: hsla(var(--ig-secondary-500));
   width: max-content;
   height: max-content;
   min-width: min-content;
 }
 .button_1 {
-  color: hsla(var(--igx-secondary-500));
+  color: hsla(var(--ig-secondary-500));
   margin: 0 8px 0 0;
   height: max-content;
   min-width: min-content;
   flex-shrink: 0;
 }
 .button_2 {
-  color: hsla(var(--igx-secondary-500));
+  color: hsla(var(--ig-secondary-500));
   margin: 0 4px 0 0;
   height: max-content;
   min-width: min-content;
