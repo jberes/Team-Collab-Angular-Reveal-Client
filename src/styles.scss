@@ -11,7 +11,7 @@ $custom-palette: palette(
   $primary: #09f,
   $secondary: #72da67,
   $surface: #222222,
-  $grays: #FFFFFF);
+  $gray: #FFFFFF);
 @include theme($palette: $custom-palette, $schema: $dark-material-schema);
 
 body {

@@ -18,67 +18,18 @@ constructor(private route: ActivatedRoute)
 
 ngAfterViewInit(): void {
 
-    let id = this.route.snapshot.paramMap.get('id');
-    console.log(id);
-    
+  // let id = this.route.snapshot.paramMap.get('id');
+   
+   // You can hard-code a dashboard id here, Sales, Marketing, Manufacturing, or Campaigns.
+    let id = 'Sales';
 
-    var theme = new $.ig.MountainDarkTheme();
-    theme.visualizationBackgroundColor = '#212121';
-    theme.dashboardBackgroundColor = '#424242';
-    theme.useRoundedCorners = false;
-    theme.chartColors = ['#72B24D', '#9362A3', '#F06583', '#FCB13F', '#407DB7' ]; 
-
-    $.ig.RevealSdkSettings.theme = theme;
-
- // $.ig.RevealSdkSettings.overrideLocale(RevealApi.SupportedLocales.Ko);
-
-    //$.ig.RevealSdkSettings.setBaseUrl('https://samples.revealbi.io/upmedia-backend/reveal-api/');
-    $.ig.RevealSdkSettings.setBaseUrl('https://localhost:7299/'); 
-    $.ig.RevealSdkSettings.enableNewCharts='true';
-    $.ig.RevealSdkSettings.ensureFontsLoadedAsync().then(() => {
-        $.ig.RVDashboard.loadDashboard(id, (dashboard: any) => {
-        this.revealView = new $.ig.RevealView(this.el.nativeElement);
-
-        // revealView Settings
-        //this.revealView.canAddCalculatedFields = false;
-        //this.revealView.canAddDashboardFilter = false;
-        //this.revealView.canAddDateFilter = false;
-        //this.revealView.canAddPostCalculatedFields = false;
-        //this.revealView.canAddVisualization = false;
-        //this.revealView.canChangeVisualizationBackgroundColor = false;
-        //this.revealView.canCopyVisualization = false;
-        //this.revealView.canDuplicateVisualization = false;
-        //this.revealView.canEdit = false;
-        //this.revealView.canMaximizeVisualization = false;
-        //this.revealView.canSaveAs = false;
-        //this.revealView.crosshairsEnabled = false;
-
-        // this.revealView.hoverTooltipsEnabled = false;
-        // this.revealView.maximizedVisualization = false;
-        // this.revealView.serverSideSave = false;
-        // this.revealView.showChangeDataSource = false;
-        // this.revealView.showChangeVisualization = false;
-        // this.revealView.showDataBlending = false;
-        // this.revealView.showDataSourceSelectionDialogSearch = false;
-        // this.revealView.showEditDataSource = false;
-        // this.revealView.showExportImage = false;
-        // this.revealView.showExportToExcel = false;
-        // this.revealView.showExportToPDF = false;
-        // this.revealView.showExportToPowerpoint = false;
-        // this.revealView.showFilters = false;
-        // this.revealView.showHeader = false;
-        // this.revealView.showMachineLearningModelsIntegration = false;
-        // this.revealView.showMenu = false;
-        // this.revealView.showRefresh = false;
-        // this.revealView.showStatisticalFunctions = false;
-        // this.revealView.singleVisualizationMode = false;
-        // this.revealView.startInEditMode = false;
-        // this.revealView.startWithNewVisualization = false;
-
-        this.revealView.dashboard = dashboard;
+    // Use Cloud Server
+    $.ig.RevealSdkSettings.setBaseUrl('https://samples.revealbi.io/upmedia-backend/reveal-api/');
+ 
+     // Load Dashboard
+    $.ig.RVDashboard.loadDashboard(id, (dashboard: any) => {
+    this.revealView = new $.ig.RevealView(this.el.nativeElement);
+    this.revealView.dashboard = dashboard;
     });
-  });
-}
-
-
+  }
 }
