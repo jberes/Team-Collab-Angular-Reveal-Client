@@ -20,16 +20,20 @@ ngAfterViewInit(): void {
 
   // let id = this.route.snapshot.paramMap.get('id');
    
-   // You can hard-code a dashboard id here, Sales, Marketing, Manufacturing, or Campaigns.
+   // You can hard-code a dashboard id here, Sales, Marketing, Campaigns, or Manufacturing.
     let id = 'Sales';
 
-    // Use Cloud Server
+    // Set the Locaion of the Reveal Server
     $.ig.RevealSdkSettings.setBaseUrl('https://samples.revealbi.io/upmedia-backend/reveal-api/');
  
-     // Load Dashboard
-    $.ig.RVDashboard.loadDashboard(id, (dashboard: any) => {
-    this.revealView = new $.ig.RevealView(this.el.nativeElement);
-    this.revealView.dashboard = dashboard;
+     // Load Dashboard from Server
+    $.ig.RVDashboard.loadDashboard("Sales").then((dashboard: any) => {
+
+      // Create a New Instance of a RevealView
+      this.revealView = new $.ig.RevealView(this.el.nativeElement);
+
+      // Assign the Dashboard to the RevealView
+      this.revealView.dashboard = dashboard;
     });
   }
 }
