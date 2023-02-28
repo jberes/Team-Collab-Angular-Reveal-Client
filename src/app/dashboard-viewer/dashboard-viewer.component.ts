@@ -18,10 +18,10 @@ constructor(private route: ActivatedRoute)
 
 ngAfterViewInit(): void {
 
-  // let id = this.route.snapshot.paramMap.get('id');
+   let id = this.route.snapshot.paramMap.get('id');
    
    // You can hard-code a dashboard id here, Sales, Marketing, Campaigns, or Manufacturing.
-    let id = 'Sales';
+   // let id = 'Sales';
 
     // Set the Locaion of the Reveal Server
     $.ig.RevealSdkSettings.setBaseUrl('https://samples.revealbi.io/upmedia-backend/reveal-api/');
