@@ -27,7 +27,7 @@ ngAfterViewInit(): void {
     $.ig.RevealSdkSettings.setBaseUrl('https://samples.revealbi.io/upmedia-backend/reveal-api/');
  
      // Load Dashboard from Server
-    $.ig.RVDashboard.loadDashboard("Sales").then((dashboard: any) => {
+    $.ig.RVDashboard.loadDashboard(id).then((dashboard: any) => {
 
       // Create a New Instance of a RevealView
       this.revealView = new $.ig.RevealView(this.el.nativeElement);
