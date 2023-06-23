@@ -1,7 +1,9 @@
 import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { environment } from 'src/environments/environment';
 
 declare let $: any;
+$.ig.RevealSdkSettings.setBaseUrl(environment.revealServer);
 
 @Component({
   selector: 'app-dashboard-viewer',
@@ -22,9 +24,6 @@ ngAfterViewInit(): void {
    
    // You can hard-code a dashboard id here, Sales, Marketing, Campaigns, or Manufacturing.
    // let id = 'Sales';
-
-    // Set the Locaion of the Reveal Server
-    $.ig.RevealSdkSettings.setBaseUrl('https://samples.revealbi.io/upmedia-backend/reveal-api/');
  
      // Load Dashboard from Server
     $.ig.RVDashboard.loadDashboard(id).then((dashboard: any) => {

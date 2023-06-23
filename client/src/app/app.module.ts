@@ -9,13 +9,15 @@ import { FormsModule } from '@angular/forms';
 import { DashboardsComponent } from './dashboards/dashboards.component';
 import { DashboardViewerComponent } from './dashboard-viewer/dashboard-viewer.component';
 import { HttpClientModule } from '@angular/common/http';
+import { DashboardThumbnailComponent } from './components/dashboard-thumbnail/dashboard-thumbnail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MyTasksComponent,
     DashboardsComponent,
-    DashboardViewerComponent
+    DashboardViewerComponent,
+    DashboardThumbnailComponent
   ],
   imports: [
     BrowserModule,

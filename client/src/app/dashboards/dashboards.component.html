@@ -56,8 +56,8 @@
           {{ item.DateAdded }}
         </h5>
       </igx-card-header>
-      <igx-card-media height="400px"> 
-        <img [src]="item.ThumbnailURL" class="image" />
+      <igx-card-media height="200px"> 
+        <app-dashboard-thumbnail [dashboardId]="item.Title"/>
       </igx-card-media>
       <igx-card-actions [reverse]="true" class="actions-content">
         <button igxButton="icon" igxRipple>
